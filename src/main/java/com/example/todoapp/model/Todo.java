@@ -20,6 +20,12 @@ public class Todo {
     @Column(name = "isDone")
     private boolean isDone = false;
 
+    public Todo(long id, String title, boolean isDone) {
+        this.id = id;
+        this.title = title;
+        this.isDone = isDone;
+    }
+
     public Todo() {
     }
 

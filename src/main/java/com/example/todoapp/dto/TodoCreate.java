@@ -1,7 +1,11 @@
 package com.example.todoapp.dto;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class TodoCreate {
-    
+
+    @NotBlank(message = "Titre obligatoire")
+    @NotNull(message = "Veuillez saisir un titre")
     private String title;
 
     public TodoCreate() {
