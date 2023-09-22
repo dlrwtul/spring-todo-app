@@ -1,4 +1,4 @@
-package com.example.todoapp.exception;
+package com.example.todoapp.domain.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

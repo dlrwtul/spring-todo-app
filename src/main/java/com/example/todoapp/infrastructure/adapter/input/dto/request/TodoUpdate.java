@@ -1,37 +1,22 @@
-package com.example.todoapp.dto;
+package com.example.todoapp.infrastructure.adapter.input.dto.request;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
+
+@Builder
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class TodoUpdate {
 
-    private long id;
+    private Long id;
+
+    @NotBlank(message = "Titre obligatoire")
+    @NotNull(message = "Veuillez saisir un titre")
     private String title;
+
+    @NotNull(message = "Champs requis")
     private boolean isDone;
-
-    public TodoUpdate(long id, String title, boolean isDone) {
-        this.title = title;
-        this.isDone = isDone;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public boolean isDone() {
-        return isDone;
-    }
-
-    public void setDone(boolean isDone) {
-        this.isDone = isDone;
-    }
 }
